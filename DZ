@@ -1,0 +1,92 @@
+Задание 1:
+a = 42
+b = 3.14159
+c = "Hello, Python!"
+d = True
+e = [1, 2, 3]
+f = (4, 5, 6)
+g = {"name": "Alice", "age": 30}
+h = {7, 8, 9}
+i = None
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(f))
+print(type(g))
+print(type(h))
+print(type(i))
+
+
+Задание 2:
+my_list = [1, 2, 3]
+my_list[0] = 100
+print(my_list) # list изменяется после создания
+
+my_tuple = (1, 2, 3)
+my_tuple[0] = 100
+print(my_tuple) # tuple - не изменяется после создания и из-за этого программа выводит ошибку
+
+my_string = "cat"
+my_string[0] = "b"
+print(my_string) # string - не изменяется и из-за этого программа выводит ошибку
+
+
+Задание 3:
+num1 = input("Введите первое число: ")
+num2 = input("Введите второе число: ")
+num1_int = int(num1)
+num2_int = int(num2)
+sum = num1_int + num2_int
+print(sum)
+
+
+Задание 4:
+1. Хранение текущего количества студентов в группе.  
+int
+2. Хранение температуры в градусах Цельсия (например, 23.5). float
+3. Хранение логина пользователя (например, "ivanov_ivan").
+tuple 
+4. Хранение информации о том, включено ли уведомление (да/нет). 
+bool
+5. Хранение списка любимых фильмов. 
+list
+6. Хранение координат точки в 2D пространстве (x, y), которые не должны изменяться после задания. 
+tuple
+7. Хранение уникальных ID товаров в корзине покупок. 
+set
+8. Хранение соответствия между названием страны и её столицей. 
+dict
+
+
+Задание 5:
+shopping_list = ["Курица", "Чай", "Макароны"]
+shopping_list.append("Молоко")
+len(shopping_list)
+print(len(shopping_list))
+unique_items = set(shopping_list)
+print(unique_items)
+
+
+Задание 6:
+name = input('Введите Ваше имя: ')
+age = input('Введите Ваш возраст: ')
+subjects = input('Введите Ваши любимые предметы(через запятую):')
+name_str = str
+age_int = int
+subject_str = str
+ank = {
+   'Имя': name,
+   'Возраст': age,
+   'Предметы': subjects
+}
+print('=' * 30)
+print('АНКЕТА СТУДЕНТА')
+print('=' * 30)
+print(f'ИМЯ: {name}')
+print(f'Возраст: {age}')
+print(f'Предметы: {subjects}')
+print('=' * 30)
+
+
