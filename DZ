@@ -90,3 +90,30 @@ print(f'Предметы: {subjects}')
 print('=' * 30)
 
 
+ПРАКТИЧЕСКАЯ 4
+Задание 1:
+import math
+
+x = float(input("Введите число: "))
+res = math.ceil(x) + math.floor(x)
+print(res)
+
+Задание 2:
+import math
+
+x = float(input("Введите первое число для первой координаты: "))
+y = float(input("Введите второе число: "))
+x2 = float(input("Введите первое число для второй координаты: "))
+y2 = float(input("Введите первое число: "))
+dist = math.sqrt((x - x2)**2 + (y - y2)**2)
+print(dist)
+
+Задание 3:
+num1 = input("Введите четырехзначное число:")
+thous = int(num1[0])
+hundr = int(num1[1])
+ten = int(num1[2])
+uni = int(num1[3])
+print(f"Цифра в позиции тысяч, сотен, десятков и единиц равна: {thous, hundr, ten, uni}")
+
+Задание 4:
