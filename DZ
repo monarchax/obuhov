@@ -109,11 +109,41 @@ dist = math.sqrt((x - x2)**2 + (y - y2)**2)
 print(dist)
 
 Задание 3:
-num1 = input("Введите четырехзначное число:")
-thous = int(num1[0])
-hundr = int(num1[1])
-ten = int(num1[2])
-uni = int(num1[3])
-print(f"Цифра в позиции тысяч, сотен, десятков и единиц равна: {thous, hundr, ten, uni}")
+num1 = int(input("Введите четырехзначное число: "))
+thousand = num1 // 1000
+hundred = num1 // 100 % 10
+ten = num1 % 100 // 10
+unit = num1 % 10
+print(f"Цифра в позиции тысяч равна {thousand}")
+print(f"Цифра в позиции сотен равна {hundred}")
+print(f"Цифра в позиции десятков равна {ten}")
+print(f"Цифра в позиции единиц равна {unit}")
 
 Задание 4:
+stud = int(input("Введите количество школьников: "))
+mand = int(input("Введи количество мандаринов: "))
+mand_get = mand // stud
+mand_rem = mand % stud
+print(f"Каждому школьнику достанется {mand_get}")
+print(f"Останется в корзине {mand_rem}")
+
+Задание 5:
+minute1 = int(input("Введите количество минут: "))
+hour = minute1 // 60
+minute = minute1 % 60
+print(f"{hour}:{minute}")
+
+Задание 6:
+import math
+
+x = int(input("Введите количество градусов: "))
+r = math.radians(x)
+res = math.sin(r) + math.cos(r) + math.tan(r)**2
+print(res)
+
+Задание 7:
+import math
+
+num_seat = int(input("Введите номер места: "))
+num_coupe = math.ceil(num_seat/4)
+print(f"Номер купе: {num_coupe}")
