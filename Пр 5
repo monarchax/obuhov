@@ -1,0 +1,79 @@
+Задание 1:
+print("Расчет налогов")
+income = float(input("Введите годовой доход: "))
+TAX = 0.13
+sum_tax = income * TAX
+total = income - sum_tax
+print(f"Сумма до налога = {income:,.2f} руб.")
+print(f"Сумма налога = {sum_tax:,.2f} руб.")
+print(f"Сумма после вычета налога = {total:,.2f} руб.")
+
+Задание 2:
+print("Калькулятор ИМТ")
+parameters = input("Введите свой вес (в кг) и рост (в м) (через пробел): ").split()
+weight, height = map(float, parameters)
+IMT = weight / (height * height)
+print(f"Ваш ИМТ: {IMT:.1f}")
+
+Задание 3:
+print("Конвертер валют")
+USD_TO_RUB = 95.50
+def convert_usd_to_rub(amount_usd):
+     return amount_usd * USD_TO_RU
+usd = float(input("Введите сумму в долларах: "))
+rub = convert_usd_to_rub(usd)
+print(f"USD = {usd}, RUB = {rub}")
+
+Задание 4:
+import math
+
+print("Калькулятор площади")
+def calculate_rectangle_area(width, height):
+    """
+    Вычисляет площадь прямоугольника
+    """
+    return width * height
+def calculate_circle_area(radius):
+    """
+    Вычисляет площадь круга 
+    """
+    return 2 * math.pi * radius
+
+width = float(input("Введите ширину прямоугольника: "))
+height = float(input("Введите высоту прямоугольника: "))
+
+print(f"Площадь прямоугольника: {calculate_rectangle_area(width, height):.2f}")
+
+radius = float(input("Введите радиус окружности: "))
+
+print(f"Площадь окружности: {calculate_circle_area(radius):.2f}")
+
+Задание 5:
+print("Банкомат")
+
+sum = int(input("Введите сумму кратную 100: "))
+
+bill5000 = sum // 5000
+sum = sum % 5000
+
+bill2000 = sum // 2000
+sum = sum % 2000
+
+bill1000 = sum // 1000
+sum = sum % 1000
+
+bill500 = sum // 500
+sum = sum % 500
+
+bill200 = sum // 200
+sum = sum % 200
+
+bill100 = sum // 100
+sum = sum % 100
+
+print(f"5000 купюры: {bill5000}")
+print(f"2000 купюры: {bill2000}")
+print(f"1000 купюры: {bill1000}")
+print(f"500 купюры: {bill500}")
+print(f"200 купюры: {bill200}")
+print(f"100 купюры: {bill100}")
