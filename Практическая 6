@@ -1,0 +1,62 @@
+Задание 1:
+temp = float(input("Введите температуру: "))
+pressure = float(input("Введите давление: "))
+pulse = float(input("Введите пульс: "))
+
+if 36 <= temp <= 37 and 110 <= pressure <= 130 and 60 <= pulse <= 100:
+    print("У Вас нормальное состояние!")
+elif 35 <= temp < 36 or 37 < temp <= 38 and 105 <= pressure < 110 or 130 < pressure <= 140 and 55 <= pulse < 60 or 100 < pulse <= 110:
+    print("У Вас легкое недомогание")
+else:
+    print("Требуется врач")
+
+Задание 2:
+number = int(input("Введите номер кармана: "))
+
+if 0 <= number <= 36 and 1 < number <= 10 or 19 <= number <= 28 and number % 2 == 0:
+    print("Черный цвет")
+elif 0 <= number <= 36 and 1<=number<=10 or 19<=number<=28 and number % 2 == 1:
+    print("Красный цвет")
+elif 0 <= number <= 36 and 11<=number<=18 or 29<=number<=36 and number % 2 == 1:
+    print("Черный цвет")
+elif 0<=number <= 36 and 11<=number<=18 or 29<=number<=36 and number % 2 == 0:
+    print("Красный цвет")
+elif number == 0:
+    print("Зеленый карман")
+else:
+    print("Ошибка ввода")
+
+Задание 3:
+cell1 = int(input("Введите номер столбца для первой клетки: "))
+cell2 = int(input("Введите номер строки для первой клетки: "))
+cell3 = int(input("Введите номер столбца для второй клетки: "))
+cell4 = int(input("Введите номер строки для второй клетки: "))
+
+if (cell1+cell2)%2 == (cell3+cell4)%2:
+    print("YES")
+else:
+    print("NO")
+
+Задание 4:
+cell1 = int(input("Введите номер столбца для первой клетки: "))
+cell2 = int(input("Введите номер строки для первой клетки: "))
+cell3 = int(input("Введите номер столбца для второй клетки: "))
+cell4 = int(input("Введите номер строки для второй клетки: "))
+
+if (cell1-cell3)==(cell2-cell4) or (cell1-cell3)==(cell4-cell2) and not cell1==cell3 and not cell2==cell4:
+    print("YES")
+else:
+    print("NO")
+
+Задание 5:
+cell1 = int(input("Введите номер столбца для первой клетки: "))
+cell2 = int(input("Введите номер строки для первой клетки: "))
+cell3 = int(input("Введите номер столбца для второй клетки: "))
+cell4 = int(input("Введите номер строки для второй клетки: "))
+
+if (cell1-cell3)==(cell2-cell4) or (cell1-cell3)==(cell4-cell2) and not cell1==cell3 and not cell2==cell4:
+    print("YES")
+elif cell1==cell3 and cell2==cell4:
+    print("YES")
+else:
+    print("NO")
