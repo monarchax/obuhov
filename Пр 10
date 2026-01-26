@@ -1,0 +1,26 @@
+Задание 1:
+while True:
+    password = int(input("Введите пароль: "))
+    if password == 4590:
+        print("Доступ разрешен")
+        break
+    else:
+        print("Пароль неверный")
+
+Задание 2:
+num1 = int(input("Введите первое число: "))
+while True:
+    num2 = int(input("Введите второе число: "))
+    if num1 < num2:
+        break
+    else:
+        print("Введите корректное число")
+while True:
+    num3 = int(input("Введите третье число: "))
+    if num2 < num3:
+        print("Последовательность принята")
+        break
+    else:
+        print("Введите корректное число")
+
+Задание 3:
