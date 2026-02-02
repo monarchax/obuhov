@@ -1,0 +1,16 @@
+Задание 1:
+for n in range(1, 13):
+    for k in range(1, 13):
+        m = 12 - n -k
+        if 28*n+30*k+31*m==365:
+            print(f"{n},{k},{m}")
+
+Задание 2:
+for bulls in range(11):
+    for cows in range(21):
+        remaining = 100 - cows*5 - bulls*10
+        if remaining > 0:
+            calves = remaining/0.5
+            print(f"Быков: {bulls}, Коров: {cows}, Телята: {int(calves)}")
+
+Задание 3:
