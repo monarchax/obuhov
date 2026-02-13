@@ -1,0 +1,58 @@
+Задание 1:
+n = int(input("Введите число(>=1): "))
+list_nums = []
+for i in range(1, n+1, 2):
+    list_nums.append(i)
+print(list_nums)
+
+Задание 2:
+prices = [1500,500, 2000, 3500, 1000, 4500]
+min_price = min(prices)
+max_price = max(prices)
+total_price = sum(prices)
+item_price = total_price / len(prices)
+print(f"Самый дорогой товар: {max_price} руб." )
+print(f"Самый дешевый товар товар: {min_price} руб.")
+print(f"Общая стоимость всех товаров: {total_price} руб.")
+print(f"Общая стоимость всех товаров: {min_price} руб.")
+print(f"Средняя цена товара: {item_price} руб.")
+
+Задание 3:
+users = ['Admin', 'Guest', 'User', 'Bot']
+users[2] = 'Moderator'
+users[-1] = 'SuperAdmin'
+users.append('NewBie')
+print(users)
+
+Задание 4:
+marks = [5, 4, 3, 5, 2, 5, 4, 3, 5, 5]
+count_five = 0
+count_two = 0
+for mark in marks:
+    if mark == 5:
+        count_five += 1
+    elif mark == 2:
+        count_two += 1
+print(count_five, count_two)
+
+Задание 5:
+data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+nums_three = data[:3]
+nums_three_last = data[-3:]
+reversed_nums = data[::-1]
+odd_nums = data[1::2]
+print(f"Первая тройка чисел: {nums_three}")
+print(f"Последняя тройка чисел: {nums_three_last}")
+print(f"Список в обратном порядке: {reversed_nums}")
+print(f"Только элементы с нечетными индексами: {odd_nums}")
+
+Задание 6:
+word = input("Введите слово: ")
+list1 = list(word)
+palindrome = list1[::-1]
+if palindrome == list1:
+    print("Это палиндром")
+else:
+    print("Это не палиндром")
+
+Задание 7:
