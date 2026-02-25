@@ -20,3 +20,27 @@ for i in range(count_str):
     num = input("Введите число: ")
     res.extend(num)
 print(res)
+
+Задание 3:
+str1 = input("Введите строку: ")
+parts = str1.split("\\")
+for part in parts:
+    print(part)
+
+
+
+Задание 6:
+numbers = [1, 2, 3]
+numbers1 = [8, 9, 10, 11]
+numbers.extend(numbers1)
+print(f"Дополнение кода: {numbers}")
+numbers.insert(1, 17)
+print(f"Замена второго по порядку элемента на число 17: {numbers}")
+numbers.append([4, 5, 6])
+print(f"Добавил 4, 5, 6: {numbers}")
+del numbers[0]
+print(f"Удаление первого элемента по порядку: {numbers}")
+numbers.extend(numbers)
+print(f"Удвоил список: {numbers}")
+numbers.insert(3, 25)
+print(f"Добавляет число 25 по индексу 3: {numbers}")
