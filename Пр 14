@@ -1,0 +1,9 @@
+Задание 1:
+from random import randint
+N = 10
+arr = [randint(1,10) for i in range(N)]
+print(arr)
+print(f"Максимальное число: {max(arr)}")
+print(f"Позиция: {arr.index(max(arr))}")
+
+Задание 2:
