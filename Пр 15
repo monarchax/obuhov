@@ -1,0 +1,19 @@
+symbols = input("Введите 25 символов: ")
+print(symbols[0:5])
+print(symbols[5:10])
+print(symbols[10:15])
+print(symbols[15:20])
+print(symbols[20:25])
+
+enter = symbols.find("н")
+row = enter//5
+column = enter%5
+print(row, column)
+
+finish = symbols.find("ф")
+row1 = finish//5
+column1 = finish%5
+print(row1, column1)
+
+distance = abs(row - row1)+abs(column - column1)
+print(distance)
