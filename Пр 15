@@ -1,19 +1,60 @@
-symbols = input("Введите 25 символов: ")
+symbols = input("Введите 25 символов(0 — проход, 1 — стена, л — ловушка (-10 HP), м — монета, ф — выход, з — враг (-50 HP), н — начальная точка): ")
 print(symbols[0:5])
 print(symbols[5:10])
 print(symbols[10:15])
 print(symbols[15:20])
 print(symbols[20:25])
 
+print("Задание 1.2")
 enter = symbols.find("н")
-row = enter//5
-column = enter%5
-print(row, column)
+row = enter//5 + 1
+column = enter%5 + 1
+print(f"Местонахождение входа в лабиринт: {row, column}")
 
+print("Задание 1.3")
 finish = symbols.find("ф")
-row1 = finish//5
-column1 = finish%5
-print(row1, column1)
+row1 = finish//5 + 1
+column1 = finish%5 + 1
+print(f"Местонахождение выхода: {row1, column1}")
 
+print("Задание 1.4")
 distance = abs(row - row1)+abs(column - column1)
 print(distance)
+
+print("Задание 1.5")
+count = 0
+for i in symbols:
+    if "м" in i:
+        count += 1
+print(f"{"🪙"*count}")
+
+print("Задание 1.6")
+hp_start = 100
+hp = 0
+count_l = 0
+count_z = 0
+for i in symbols:
+    if "л" in i:
+        count_l += 10
+    if "з" in i:
+        count_z += 50
+    hp = hp_start - count_l - count_z
+heart_full = hp//10
+heart_empty = (100 - abs(hp))//10
+while heart_empty > 0:
+    if hp <= 0:
+        print("Вы погибли")
+    break
+print(f"Здоровье: {"🤍"* heart_full}{"🖤" * heart_empty}")
+
+print("Задание 1.7")
+for emoji in range(0, 25, 5):
+    sym = symbols[emoji:emoji+5]
+    sym = sym.replace("0", "⬜")
+    sym = sym.replace("1","⬛")
+    sym = sym.replace("л", "🔷")
+    sym = sym.replace("м", "🟡")
+    sym = sym.replace("ф", "🟫")
+    sym = sym.replace("з", "🐷")
+    sym = sym.replace("н", "⭐")
+    print(sym)
