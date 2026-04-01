@@ -1,0 +1,33 @@
+Задание 1:
+word = input("Введите строку из слов: ")
+
+words = set(word.split())
+
+print(f"Количество:{len(words)}")
+alphabet = sorted(list(words))
+print(f"слова:{alphabet}")
+
+Задание 2:
+id_allowed = "10 20 30"
+id_incoming = "20 40 10 50"
+set_allowed = set(id_allowed.split())
+
+for id in id_incoming.split():
+    if id in set_allowed:
+        print("OK")
+    else:
+        print("ADDED")
+
+Задание 3:
+serv_a = "data.db image.png log.txt"
+serv_b = "image.png script.py data.db"
+
+set_a = set(serv_a.split())
+set_b = set(serv_b.split())
+
+common = set_a.intersection(set_b)
+lost = set_a - set_b
+print(f"Общие: {common}")
+print(f"Потерянные: {lost}")
+
+Задание 4:
