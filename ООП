@@ -519,10 +519,7 @@ def run_game():
     for monster in monsters:
         while monster.is_alive() and hunter.is_alive():
             hunter.show_inventory()
-            weapon_choice = int(input("Введите номер оружия(0-2): "))
-            if weapon_choice > 2 or weapon_choice < 0:
-                print("Некорректный номер оружия")
-                continue
+            weapon_choice = random.randint(0, 2)
             hunter.attack(weapon_choice, monster)
             if not monster.is_alive():
                 print(f"{monster.get_name()} убит\n")
@@ -561,7 +558,6 @@ run_game()
 # m.set_hp(-50)
 # m.show_status()
 # print(m.is_alive())
-
 
 
 
