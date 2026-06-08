@@ -464,7 +464,7 @@ class CrossbowBolt(Weapon):
 class Hunter:
     def __init__(self, name):
         self.__name = name
-        self.__hp = 300
+        self.__hp = 100
         self.__weapons = []
 
     def get_name(self):
@@ -504,37 +504,38 @@ class Hunter:
 
     def take_damage(self, damage):
         self.__hp -= damage
-        print(f"{hunter.get_name()} HP: {self.get_hp()}\n")
+        print(f"{self.get_name()} HP: {self.get_hp()}\n")
 
 
-hunter = Hunter("Ван Хельсинг")
-sword = SilverSword()
-water = HolyWater()
-crossbow = CrossbowBolt()
-hunter.add_weapon(crossbow)
-hunter.add_weapon(sword)
-hunter.add_weapon(water)
-monsters = [Zombie("Зомби"), Vampire("Вампир"), Ghost("Призрак"), Werewolf("Оборотень")]
-
-for monster in monsters:
-    while monster.is_alive() and hunter.is_alive():
-        hunter.show_inventory()
-        weapon_choice = int(input("Введите номер оружия(0-2): "))
-        if weapon_choice > 2 or weapon_choice < 0:
-            print("Некорректный номер оружия")
-            continue
-        hunter.attack(weapon_choice, monster)
-        if not monster.is_alive():
-            print(f"{monster.get_name()} убит\n")
+def run_game():
+    hunter = Hunter("Ван Хельсинг")
+    sword = SilverSword()
+    water = HolyWater()
+    crossbow = CrossbowBolt()
+    hunter.add_weapon(crossbow)
+    hunter.add_weapon(sword)
+    hunter.add_weapon(water)
+    monsters = [Zombie("Зомби"), Vampire("Вампир"), Ghost("Призрак"), Werewolf("Оборотень")]
+    for monster in monsters:
+        while monster.is_alive() and hunter.is_alive():
+            hunter.show_inventory()
+            weapon_choice = int(input("Введите номер оружия(0-2): "))
+            if weapon_choice > 2 or weapon_choice < 0:
+                print("Некорректный номер оружия")
+                continue
+            hunter.attack(weapon_choice, monster)
+            if not monster.is_alive():
+                print(f"{monster.get_name()} убит\n")
+                break
+            monster.attack_hunter(hunter)
+            if not monster.is_alive():
+                print("Вы победили")
+                break
+        if not hunter.is_alive():
+            print("Вы проиграли")
             break
-        monster.attack_hunter(hunter)
-    if not monster.is_alive():
-        print("Вы победили")
-        break
-    if not hunter.is_alive():
-        print("Вы проиграли")
-        break
 
+run_game()
 
 
 
